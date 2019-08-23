@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, Fragment } from 'react';
 import './App.css';
+import 'materialize-css/dist/css/materialize.min.css';
+// import M from 'materialize-css/dist/js/materialize.min.js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Landing/Navbar';
+import ZainAli from './components/ZainAli/ZainAli';
+import WhatIOffer from './components/WhatIOffer/WhatIOffer';
+import HappyClients from './components/Clients/HappyClients';
 
 function App() {
+  // const alertOnScroll = () => {
+  //   window.onscroll = () => console.log('Assalamu Alaikum!');
+  // };
+  // useEffect(() => {
+  //   alertOnScroll();
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <ZainAli />
+        <WhatIOffer />
+        <HappyClients />
+      </Fragment>
+    </Router>
   );
 }
 
