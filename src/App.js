@@ -9,12 +9,12 @@ import WhatIOffer from './components/WhatIOffer/WhatIOffer';
 import HappyClients from './components/Clients/HappyClients';
 
 function App() {
-  // const alertOnScroll = () => {
-  //   window.onscroll = () => console.log('Assalamu Alaikum!');
-  // };
-  // useEffect(() => {
-  //   alertOnScroll();
-  // }, []);
+  const alertUnderConstruction = () => {
+    alert('Website is under construction! But you can view it');
+  };
+  useEffect(() => {
+    alertUnderConstruction();
+  }, []);
 
   return (
     <Router>

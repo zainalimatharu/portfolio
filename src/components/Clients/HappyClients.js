@@ -11,7 +11,7 @@ const HappyClients = () => {
   return (
     <div className="happclients">
       <div className="container mycontainer">
-        <div className="row">
+        <div className="row" style={{ marginBottom: '0px' }}>
           <HappyClient title="Happy Client" no="1" icon={faUserFriends} />
           <HappyClient title="Award Won" no="0" icon={faAward} />
           <HappyClient title="Cup of Coffee" no="183" icon={faCoffee} />
