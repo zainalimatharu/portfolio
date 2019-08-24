@@ -7,10 +7,12 @@ import Navbar from './components/Landing/Navbar';
 import ZainAli from './components/ZainAli/ZainAli';
 import WhatIOffer from './components/WhatIOffer/WhatIOffer';
 import HappyClients from './components/Clients/HappyClients';
+import Skills from './components/Skills/Skills';
+import WorkParticipation from './components/WorkParticipation/WorkParticipation';
 
 function App() {
   const alertUnderConstruction = () => {
-    alert('Website is under construction! But you can view it');
+    console.log('Website is under construction! But you can view it');
   };
   useEffect(() => {
     alertUnderConstruction();
@@ -23,6 +25,8 @@ function App() {
         <ZainAli />
         <WhatIOffer />
         <HappyClients />
+        <WorkParticipation />
+        <Skills />
       </Fragment>
     </Router>
   );

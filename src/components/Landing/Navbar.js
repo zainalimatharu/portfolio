@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,46 +10,84 @@ import {
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
+  const shrinkNav = () => {
+    window.onscroll = () => scrollFunction();
+  };
+  const scrollFunction = () => {
+    console.log('Assalamu Alaikum');
+    if (
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+      document.getElementById('rownavbar').style.height = '80px';
+      document.getElementById('rownavbar').style.backgroundColor = 'white';
+      document.getElementById('rownavbar').style.boxShadow =
+        '0 3px 12px rgba(0, 0, 0, 0.25)';
+    } else {
+      document.getElementById('rownavbar').style.height = '100px';
+      document.getElementById('rownavbar').style.backgroundColor = '#e4e4e4';
+      document.getElementById('rownavbar').style.boxShadow = 'none';
+    }
+  };
+  useEffect(() => {
+    shrinkNav();
+  }, []);
   return (
     <Fragment>
-      <nav className="z-depth 0 transparent">
-        <div className="nav-wrapper">
-          <div className="navbar-left">
-            <div className="container">
-              <NavLink to="/" className="home">
-                ZAIN
-              </NavLink>
-              <ul className="right">
-                <li className="navbar-elements">Home</li>
-                <li className="navbar-elements">Services</li>
-                <li className="navbar-elements">Resume</li>
-                <li className="navbar-elements">Pojects</li>
-                <li className="navbar-elements">Blog</li>
-                <li className="navbar-elements">Contact</li>
-              </ul>
-            </div>
+      <nav
+        className="z-depth-0 transparent"
+        id="navbar"
+        style={{ margin: '0px', padding: '0px' }}
+      >
+        <div className="nav-wrapper row" id="rownavbar">
+          <div className="nav-left">
+            <NavLink to="/" className="home left">
+              <p>ZAIN</p>
+            </NavLink>
+            <ul className="right">
+              <li>
+                <NavLink className="navbar-elements" to="/">
+                  <p className="center-align">HOME</p>
+                </NavLink>
+              </li>
+              <li>
+                <a className="navbar-elements" href="#services">
+                  <p className="center-align">SERVICES</p>
+                </a>
+              </li>
+              <li>
+                <a className="navbar-elements" href="#services">
+                  <p className="center-align">RESUME</p>
+                </a>
+              </li>
+              <li>
+                <a className="navbar-elements" href="#services">
+                  <p className="center-align">PROJECTS</p>
+                </a>
+              </li>
+              <li>
+                <a className="navbar-elements" href="#services">
+                  <p className="center-align">CONTACT</p>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="navbar-right">
-            <div className="container">
-              <ul>
-                <li className="navbar-social-elements">
-                  <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
-                </li>
-                <li className="navbar-social-elements">
-                  <FontAwesomeIcon icon={faTwitter} size="lg" />
-                </li>
-                <li className="navbar-social-elements">
-                  <FontAwesomeIcon icon={faFacebook} size="lg" />
-                </li>
-                {/* <li className="navbar-social-elements">
-                <FontAwesomeIcon icon={faSkype} size="lg" />
-              </li> */}
-              </ul>
-            </div>
+          <div className="nav-right">
+            <ul>
+              <li className="navbar-social-elements linkedin">
+                <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+              </li>
+              <li className="navbar-social-elements">
+                <FontAwesomeIcon icon={faTwitter} size="lg" />
+              </li>
+              <li className="navbar-social-elements">
+                <FontAwesomeIcon icon={faFacebook} size="lg" />
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-      <div className="row" style={{ margin: '0px' }}>
+      <div className="landing">
         <div className="landing-left">
           <div className="container">
             <div className="row">

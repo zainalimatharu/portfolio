@@ -6,7 +6,7 @@ import { faCreativeCommonsPdAlt } from '@fortawesome/free-brands-svg-icons';
 const WhatIOffer = () => {
   return (
     <Fragment>
-      <div className="row whatioffer" style={{marginBottom: "0px"}}>
+      <div className="row whatioffer" id="services" style={{marginBottom: "0px"}}>
         <h4 className="center-align">WHAT I OFFER</h4>
         <div className="container mycontainer">
           <Offer
