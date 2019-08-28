@@ -3,7 +3,10 @@ import {
   faUserFriends,
   faAward,
   faCoffee,
-  faLaptop
+  faLaptop,
+  faTrophy,
+  faMugHot,
+  faLaptopCode
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -13,9 +16,9 @@ const HappyClients = () => {
       <div className="container mycontainer">
         <div className="row" style={{ marginBottom: '0px' }}>
           <HappyClient title="Happy Client" no="1" icon={faUserFriends} />
-          <HappyClient title="Award Won" no="0" icon={faAward} />
-          <HappyClient title="Cup of Coffee" no="183" icon={faCoffee} />
-          <HappyClient title="Project Complete" no="5" icon={faLaptop} />
+          <HappyClient title="Award Won" no="0" icon={faTrophy} />
+          <HappyClient title="Cup of Coffee" no="6" icon={faMugHot} />
+          <HappyClient title="Project Complete" no="5" icon={faLaptopCode} />
         </div>
       </div>
     </div>

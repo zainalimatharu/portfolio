@@ -5,9 +5,9 @@ import {
   faFacebook,
   faTwitter,
   faLinkedinIn,
-  faSkype
+  faSkypez
 } from '@fortawesome/free-brands-svg-icons';
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import { faFileDownload, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const shrinkNav = () => {
@@ -21,11 +21,13 @@ const Navbar = () => {
     ) {
       document.getElementById('rownavbar').style.height = '80px';
       document.getElementById('rownavbar').style.backgroundColor = 'white';
+      document.getElementById('rownavbar').style.opacity = '0.99';
       document.getElementById('rownavbar').style.boxShadow =
         '0 3px 12px rgba(0, 0, 0, 0.25)';
     } else {
       document.getElementById('rownavbar').style.height = '100px';
       document.getElementById('rownavbar').style.backgroundColor = '#e4e4e4';
+      document.getElementById('rownavbar').style.opacity = '1.0';
       document.getElementById('rownavbar').style.boxShadow = 'none';
     }
   };
@@ -56,17 +58,17 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a className="navbar-elements" href="#services">
+                <a className="navbar-elements" href="#workparticipation">
                   <p className="center-align">RESUME</p>
                 </a>
               </li>
               <li>
-                <a className="navbar-elements" href="#services">
+                <a className="navbar-elements" href="#portfolio">
                   <p className="center-align">PROJECTS</p>
                 </a>
               </li>
               <li>
-                <a className="navbar-elements" href="#services">
+                <a className="navbar-elements" href="#contactme">
                   <p className="center-align">CONTACT</p>
                 </a>
               </li>
@@ -75,13 +77,19 @@ const Navbar = () => {
           <div className="nav-right">
             <ul>
               <li className="navbar-social-elements linkedin">
-                <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+                <a href="https://www.linkedin.com/in/zainalimatharu/">
+                  <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+                </a>
               </li>
               <li className="navbar-social-elements">
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
+                <a href="https://twitter.com/zaynalimatharu">
+                  <FontAwesomeIcon icon={faTwitter} size="lg" />
+                </a>
               </li>
               <li className="navbar-social-elements">
-                <FontAwesomeIcon icon={faFacebook} size="lg" />
+                <a href="https://web.facebook.com/Zainalimatharu">
+                  <FontAwesomeIcon icon={faFacebook} size="lg" />
+                </a>
               </li>
             </ul>
           </div>
@@ -91,7 +99,7 @@ const Navbar = () => {
         <div className="landing-left">
           <div className="container">
             <div className="row">
-              <div className="col s9 title-heading">
+              <div className="col l9 m10 s12 title-heading">
                 <p className="sub-title">Looking for a Web Developer !</p>
                 <h1>I'M Zain Ali</h1>
                 <p className="details">
@@ -99,11 +107,12 @@ const Navbar = () => {
                   experience. Experienced with all stages of the development
                   cycle for dynamic web projects.
                 </p>
-                <button className="button red-button">HIRE ME</button>
-                <button className="button white-button">
-                  DOWNLOAD CV{' '}
-                  <FontAwesomeIcon icon={faFileDownload} size="sm" />
-                </button>
+                <a href="#contactme" className="button red-button">
+                  HIRE ME
+                </a>
+                <a href="#zainali" className="button white-button">
+                  EXPLORE MORE <FontAwesomeIcon icon={faAngleDown} size="sm" />
+                </a>
               </div>
             </div>
           </div>

@@ -9,6 +9,10 @@ import WhatIOffer from './components/WhatIOffer/WhatIOffer';
 import HappyClients from './components/Clients/HappyClients';
 import Skills from './components/Skills/Skills';
 import WorkParticipation from './components/WorkParticipation/WorkParticipation';
+import PortfolioProjects from './components/PortfolioProjects/PortfolioProjects';
+import IMAvailable from './components/IMAvailable/IMAvailable';
+import ContactMe from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const alertUnderConstruction = () => {
@@ -27,6 +31,10 @@ function App() {
         <HappyClients />
         <WorkParticipation />
         <Skills />
+        <PortfolioProjects />
+        <IMAvailable />
+        <ContactMe />
+        <Footer />
       </Fragment>
     </Router>
   );

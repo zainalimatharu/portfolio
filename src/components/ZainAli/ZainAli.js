@@ -5,7 +5,7 @@ import sign2 from './sign2.jpg';
 const ZainAli = () => {
   return (
     <Fragment>
-      <div className="row zainali" style={{ margin: '0px' }}>
+      <div  id="zainali" className="row zainali" style={{ margin: '0px' }}>
         <div className="container">
           <div className="col l5">
             <img src={myownimage2} width="100%" alt="" />
@@ -27,7 +27,9 @@ const ZainAli = () => {
               content here', making it look like readable English.
             </p>
             <img className="signature" width="100%" src={sign2} alt="" />
-            <button className="button red-button">VIEW PORTFOLIO</button>
+            <a href="#portfolio" className="button red-button">
+              VIEW PORTFOLIO
+            </a>
           </div>
         </div>
       </div>

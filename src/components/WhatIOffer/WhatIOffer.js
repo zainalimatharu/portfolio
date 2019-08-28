@@ -1,12 +1,21 @@
 import React, { Fragment } from 'react';
-import { faLaptopCode, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLaptopCode,
+  faCodeBranch,
+  faClock,
+  faWindowClose
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreativeCommonsPdAlt } from '@fortawesome/free-brands-svg-icons';
 
 const WhatIOffer = () => {
   return (
     <Fragment>
-      <div className="row whatioffer" id="services" style={{marginBottom: "0px"}}>
+      <div
+        className="row whatioffer"
+        id="services"
+        style={{ marginBottom: '0px' }}
+      >
         <h4 className="center-align">WHAT I OFFER</h4>
         <div className="container mycontainer">
           <Offer
@@ -23,6 +32,21 @@ const WhatIOffer = () => {
             title="FULL STACK APPLICATION"
             detail="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat."
             icon={faCreativeCommonsPdAlt}
+          />
+          <Offer
+            title="24/7"
+            detail="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat."
+            icon={faClock}
+          />
+          <Offer
+            title="COMING SOON"
+            detail="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat."
+            icon={faWindowClose}
+          />
+          <Offer
+            title="COMING SOON"
+            detail="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat."
+            icon={faWindowClose}
           />
         </div>
       </div>
